@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unexpected Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>This was meant for you.</h1>
+        <p>Even if you don’t know why yet.</p>
+        <button onclick="showMessage()">Reveal Your Message</button>
+        <p id="message" style="display:none; margin-top: 20px; font-style: italic;"></p>
+        <p style="margin-top: 30px; font-size: 14px; color: #888;">Now you have to send something unexpected to someone else.</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                "One day, you’ll understand why you got this.",
+                
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("message").textContent = randomMessage;
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
